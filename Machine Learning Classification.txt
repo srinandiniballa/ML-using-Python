@@ -1,0 +1,111 @@
+Machine Learning is divided into two types:
+  1. Supervised Learning - Supervised Learning has dependent variable.
+  2. Unsupervised Learning - Unsupervised Learning has no dependent variable.
+
+
+Supervised Learning is divided into two types:
+   1.If the dependent variable is numerical then it is called "Regression".
+   2.If the dependent variable is categorical then it is called "Classification".
+
+
+--> Problems we have done :
+   1.Cardio Good Fitness --> Relationship between TM product and customer characteristics (Classification Problem).
+   2.Titanic --> Survived or not(regression problem).
+   3.auto mpg --> Relationship between mpg and other attributes (Regression problem).
+
+
+Unsupervised Learning is divided into:
+   1.Clustering or Grouping.
+   2.Association.
+   3.Dimensionality Reduction.
+
+
+--> Algorithms for Regression :
+   1.Linear Regression(*)
+   2.KNN - K-Nearest Neighbour Regression
+   3.Support Vector Regression
+   4.Decision Tree Regression(*)
+   5.Bagging Regression(*)
+   6.Adaboost Regression(*)
+   7.Gradient Boost Regression(*)
+   8.Random forest Regression(*)
+
+
+--> Algorithms for Classification : 
+   1.Logistic Regression(*)
+   2.KNN - K-Nearest Neighbour Classifier
+   3.Support Vector Classifier
+   4.Decision Tree Classifier(*)
+   5.Bagging Classifier(*)
+   6.Adaboost Classifier(*)
+   7.Gradient Boost Classifier(*)
+   8.Random Forest Classifier(*)
+   9.Naive Bayes Classifier
+
+
+--> Algorithms for Unsupervised Learning :
+   1.Hierarchial Clustering
+   2.K means Clustering
+   3.Principal Component 
+   4.Market Basket Analysis
+
+
+Q)What is Linear Regression ? (Interview Question)
+-->Linear Regression :
+Regression is building a relationship between dependent variable and independent variable.
+  1.If there is only one independent variable then it is called "Simple Linear Regression".
+  2.If there are multiple independent variables then it is called "Multiple Linear Regression".
+
+
+ 
+How ML model works ?
+--> Whenever we work with a machine learning model then we would divide the data into two parts : 
+    1. Train Data : How much data should we take : it is 70-85% of the given data.
+    2. Test Data : How much data for test data : it is the remaining data.
+--> Using train data we will build a model and we get the accuracy of the model.
+--> Test data is used to predict the model and then we check the accuracy of the model. 
+-->Accuracy difference between both should be <= 5%. If the accuracy difference is more than 5 then it is said to be a bad model.
+
+Simple Linear Regression : 
+_____________________________________________________________________
+|  X | Y  | Y^=3X | (Y-Y^)^2 | Y^=4X | (Y-Y^)^2 |  Y^=2X | (Y-Y^)^2 |
+|    |    |       |          |       |          |        |          |
+| 1  | 5  |   3   |    4     |   4   |    1     |    2   |     9    |
+|    |    |       |          |       |          |        |          |
+| 2  | 10 |   6   |    16    |   8   |    4     |    4   |    36    |
+|    |    |       |          |       |          |        |          |
+|  3 | 15 |   9   |    36    |  12   |    9     |    6   |    81    |
+|    |    |       |          |       |          |        |          |
+| 4  | 20 |   12  |    64    |  16   |    16    |    8   |   144    |
+|    |    |       |          |       |          |        |          |
+| 5  | 25 |   15  |   100    |   20  |    25    |   10   |   225    |
+|____|____|_______|__________|_______|__________|________|__________|
+                  | 220/5 =  |       |  55/5 =  |        | 495/5 =  |
+                  |    44    |       |    11    |        |    99    |
+--> If Y^ = 5X then MSE is "Zero".
+--> Y^ (y hat) is the predicted value and MSE is the Mean Square Error.
+
+--> Equation of a straight line is : y = mx + c
+  where, y = Dependent Variable
+         m = slope
+         formula for m = (y2 - y1) / (x2 - x1)
+         x = Independent Variable
+         c = Intercept
+
+                   1               
+                  ---  [summation (y - y^)^2]              
+                   n                                          [summation (y - y^)^2]
+ --> R^2 = 1 -  ----------------------------------  =  1 -  ------------------_---------
+                   1                   _                      [summation (y - y)^2]
+                  ---  [summation (y - y)^2]                
+                   n
+* The upper part is called as Mean Square Error.
+* The lower part is called as Variance.
+
+--> Whenever we are working with regression model if we type (.score) we get the value of R^2.
+--> It's value is ranging from 0 to 1.
+--> If it's value is "close to 1" then model is a "Good Model".
+--> If it's value is "less than 0.7 or close to 0 or it is negative" then the model is a "Bad Model".
+
+Q) What is meant by R^2 ? (Interview Question)
+
