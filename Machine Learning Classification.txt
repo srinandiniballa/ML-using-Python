@@ -109,3 +109,18 @@ _____________________________________________________________________
 
 Q) What is meant by R^2 ? (Interview Question)
 
+Logistic Regression : 
+   1.Supervised Learning.
+   2.Classification (Dependent Variable is categorical).
+Q) What is the main difference between Linear Regression and Logistic Regression ? (Interview Question)
+A)   Linear Regression :                     | Logistic Regression : 
+     --> Regression                          |  --> Classification
+     --> Numerical                           |  --> Categorical
+     --> Straight Line                       |  --> Sigmoid Curve
+     --> y = mx + c                          |  --> f(y) = 1 / (1 + e^-y) where y = mx + c
+     --> Output : - infinity to + infinity   |  --> Output : 0 to 1 
+Similarities : 
+Both are Supervised Machine Learning models and both would work well if the data is of linear form.
+
+
+
